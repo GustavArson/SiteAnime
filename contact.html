@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet manga weeb</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/contact.css" type="text/css">
+</head>
+
+<body class="common">
+
+    <nav>
+        <a href="index.html" class="myButton">Accueil</a>
+        <a href="galerie.html" class="myButton">Galerie</a>
+        <a href="quizz-general.html" class="myButton">Quizz</a>
+        <a href="mini-jeu.html" class="myButton">Mini-Jeu</a>
+    </nav>
+
+    <main>
+
+        <form class="cf" method="post">
+            <div class="half left cf">
+                <input type="text" id="input-name" placeholder="Name">
+                <input type="email" id="input-email" placeholder="Email address">
+                <input type="text" id="input-subject" placeholder="Subject">
+            </div>
+            <div class="half right cf">
+                <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+            </div>
+            <input type="submit" value="Submit" id="input-submit">
+        </form>
+
+
+    </main>
+    <?php
+    if(isset($_POST['message'])){
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: ' . $_POST['email'] . "\r\n";
+
+        $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
+        <p><b>Nom : </b>' . $_POST['nom'] . '<br>
+        <b>Email : </b>' . $_POST['email'] . '<br>
+        <b>Message : </b>' . $_POST['message'] . '</p>';
+
+        $retour = mail('zac.laurent1999@gmail.com', 'Envoi depuis page Contact', $message, $entete);
+        if($retour) {
+            echo '<p>Votre message a bien été envoyé.</p>';
+        }
+    }
+    ?>
+
+</body>
