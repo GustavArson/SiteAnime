@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet manga weeb</title>
     <link rel="stylesheet" href="css/common.css" type="text/css">
-    <link rel="stylesheet" href="css/quizz.css" type="text/css">
+    <link rel="stylesheet" href="css/quizz-one-piece.css" type="text/css">
 </head>
 
 <body class="common">
@@ -32,24 +32,38 @@
                 <p>Ce quizz vous est offert par le meilleur codeur du groupe</p>
             </article>
 
-            <div class="content-quizz">
-                <button id="startBTN">Démarrer le test</button>
-            </div>
-            <p>Choisir la bonne réponse :</p>
-            <div class="content-quizz reponse-quizz">
-                <p id="questionHTML">Défault question</p>
-                <p>Réponse 1 :</p>
-                <button id="rep1">Défault 1</button>
-                <p>Réponse 2 :</p>
-                <button id="rep2">Défault 2</button>
-                <p>Réponse 3 :</p>
-                <button id="rep3">Défault 3</button>
+            <div class="quizz-content">
+                <h2><span>Q</span>uiz<span>Z</span></h2>
+
+                <div class="start">
+                    <button id="start">Commencer le QuizZ</button>
+                </div>
+
+                <div id="QR">
+                    <div class="question">
+                        <h3 id="question">Default question</h3>
+                    </div>
+
+                    <div class="reponse">
+                        <div>
+                            <button id="rep1">Default reponse 1</button>
+                        </div>
+                        <div>
+                            <button id="rep2">Default reponse 2</button>
+                        </div>
+                        <div>
+                            <button id="rep3">Default reponse 3</button>
+                        </div>
+                        <div>
+                            <button id="rep4">Default reponse 4</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="content-quizz" id="result-quizz">
-                <h3><span id="win"></span><span id="loose"></span></h3>
-                <p id="result"></p>
-            </div>
+
+
+
         </section>
 
     </main>
