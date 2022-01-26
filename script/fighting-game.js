@@ -2,18 +2,17 @@ const face = document.querySelectorAll('.face')
 const attaque = document.querySelectorAll('.attaque')
 var numComments = face.length;
 var Character = 10;
-var Nana = { "pv": 500, "one": 100, "two": 300, "name": "Nana" };
+var Nana = { "pv": 400, "one": 250, "two": 400, "name": "Nana" };
 var Goku = { "pv": 1000, "one": 50, "two": 250, "name": "Goku" };
-var Boruto = { "pv": 1000, "one": 50, "two": 250, "name": "Boruto" };
-var Luffy = { "pv": 1000, "one": 50, "two": 250, "name": "Luffy" };
-var Ichigo = { "pv": 1000, "one": 50, "two": 250, "name": "Ichigo" };
-var Izuku = { "pv": 1000, "one": 50, "two": 250, "name": "Izuku" };
-var Naruto = { "pv": 1000, "one": 50, "two": 250, "name": "Naruto" };
-var Tanjiro = { "pv": 1000, "one": 50, "two": 250, "name": "Tanjiro" };
+var Boruto = { "pv": 700, "one": 100, "two": 250, "name": "Boruto" };
+var Luffy = { "pv": 900, "one": 70, "two": 250, "name": "Luffy" };
+var Ichigo = { "pv": 800, "one": 150, "two": 200, "name": "Ichigo" };
+var Izuku = { "pv": 600, "one": 10, "two": 450, "name": "Izuku" };
+var Naruto = { "pv": 1000, "one": 320, "two": 250, "name": "Naruto" };
+var Tanjiro = { "pv": 500, "one": 120, "two": 280, "name": "Tanjiro" };
 var Random;
-var CharacterList = [Boruto, Goku, Luffy, Ichigo, Izuku, Naruto, Tanjiro, Random, Nana];
-Random = CharacterList[Math.floor(Math.random() * 8 + 1)];
-
+var CharacterList = [Boruto, Goku, Luffy, Ichigo, Izuku, Naruto, Tanjiro, Nana, Random];
+Random = CharacterList[Math.floor(Math.random() * 8)];
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -53,7 +52,7 @@ async function Game(Liste, face, attaque) {
             await sleep(1000);
             if (Click_attack == 1) {
                 CPU.pv = CPU.pv - Character.one;
-                console.log(`PV joueur = ${CPU.pv}/${CPUMax}`);
+                console.log(`PV CPU = ${CPU.pv}/${CPUMax}`);
                 if (Math.floor(Math.random() * 1 + 1) == 0)
                     Character.pv = Character.pv - CPU.one
                 else
