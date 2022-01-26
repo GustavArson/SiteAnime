@@ -1,0 +1,9 @@
+
+
+.slide-container {
+	max-width:90%;
+	margin:auto;
+	max-height: 1000px;
+	border: 5px solid black;
+	overflow: hidden;
+}

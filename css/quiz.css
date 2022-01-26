@@ -1,0 +1,87 @@
+.quizz-content {
+    background-color: #2F3542;
+    padding: 2rem 0;
+}
+
+.quizz-content h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin: 1rem 0;
+}
+
+.quizz-content span {
+    color: #ffa502
+}
+
+.quizz-content #QR {
+    display: none;
+}
+
+.quizz-content .question {
+    width: 50%;
+    margin: auto;
+}
+
+.quizz-content .question h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.quizz-content .reponse {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quizz-content .reponse div {
+    margin: 1.4rem 1rem;
+}
+
+.quizz-content .reponse button {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 10px;
+    color: #000000;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 0px;
+    cursor: pointer;
+}
+
+.quizz-content .reponse button:hover {
+    background-color: #ffa502;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.start {
+    text-align: center;
+}
+
+.start button {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: #000000;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 0px;
+    cursor: pointer;
+}
+
+.start button:hover {
+    background-color: #ffa502;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.5s;
+}
