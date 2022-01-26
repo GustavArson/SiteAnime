@@ -8,3 +8,8 @@
     border: inset blue 3px;
     cursor : pointer;
 }
+
+.attaque {
+    cursor : pointer;
+    background-color: orange;
+}
