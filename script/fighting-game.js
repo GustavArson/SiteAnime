@@ -13,6 +13,7 @@ var Tanjiro = { "pv": 500, "one": 120, "two": 280, "name": "Tanjiro" };
 var Random;
 var CharacterList = [Boruto, Goku, Luffy, Ichigo, Izuku, Naruto, Tanjiro, Nana, Random];
 Random = CharacterList[Math.floor(Math.random() * 8)];
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -21,8 +22,8 @@ function sleep(ms) {
 
 async function Game(Liste, face, attaque) {
     var Character = 10
-    var CPU = Liste[Math.floor(Math.random() * 8 + 1)]
-    while (Character != 1 && Character != 2 && Character != 3 && Character != 4 && Character != 5 && Character != 6 && Character != 7 && Character != 8 && Character != 9) {
+    var CPU = Liste[Math.floor(Math.random() * 7 + 1)]
+    while (Character != 0 && Character != 1 && Character != 2 && Character != 3 && Character != 4 && Character != 5 && Character != 6 && Character != 7 && Character != 8 && Character != 9) {
         for (var i = 0; i < face.length; i++) {
             face[i].addEventListener('click', event => {
                 Character = event.target.id - 1;
@@ -30,11 +31,15 @@ async function Game(Liste, face, attaque) {
             await sleep(100);
         }
     }
-    var x = Character
-    Character = Liste[x]
+    var x = 0
+    x = Character
+    if (x == 8)
+        Character = CharacterList[Math.floor(Math.random() * 8)];
+    else 
+        Character = Liste[x]
     console.log(`${Character.name} VS ${CPU.name}`)
 
-    if (x == 1 || x == 2 || x == 3 || x == 4 || x == 5 || x == 6 || x == 7 || x == 8 || x == 9) {
+    if (x == 0 || x == 1 || x == 2 || x == 3 || x == 4 || x == 5 || x == 6 || x == 7 || x == 8 || x == 9) {
         var CharacterMax = Character.pv;
         var CPUMax = CPU.pv
         var y = 1;
